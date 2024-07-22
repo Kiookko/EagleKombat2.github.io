@@ -5,22 +5,33 @@ body {
   padding: 0;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #1c1f24;
 }
 
- button {
-    margin: 0;
-  height: 20%;
-  padding: 0;
-  width: 100%;
-  size: 20%
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
   background-color: #1c1f24;
- }
+  color: white;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
 
 .header {
   display: flex;
