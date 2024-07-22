@@ -1,3 +1,3 @@
-document.getElementById('notifying').addEventListener('click', function() {
+document.getElementById('developmentButton').addEventListener('click', function() {
     alert('Эта кнопка в разработке');
 });
