@@ -9,29 +9,39 @@ document.getElementById('developmentButton').addEventListener('click', function(
 function startDestruction() {
     const content = document.getElementById('content');
     const overlay = document.getElementById('overlay');
+    const errorImage = document.getElementById('errorImage');
 
     content.classList.add('hidden');
     overlay.classList.remove('hidden');
-    overlay.textContent = 'Телефон уничтожается...';
 
     setTimeout(() => {
-        overlay.textContent = 'Сайт ломается...';
+        document.body.classList.add('shake');
+    }, 500);
+
+    setTimeout(() => {
+        document.body.classList.remove('shake');
+        overlay.textContent = 'Телефон уничтожается...';
     }, 2000);
 
     setTimeout(() => {
-        overlay.textContent = 'Хаха, ты попался на прикол, 1 апреля не верь никому!';
+        overlay.classList.add('hidden');
+        errorImage.classList.remove('hidden');
     }, 5000);
 
     setTimeout(() => {
+        alert('Хаха, ты попался на прикол, 1 апреля не верь никому!');
         resetPage();
-    }, 10000);
+    }, 8000);
 }
 
 function resetPage() {
     const content = document.getElementById('content');
     const overlay = document.getElementById('overlay');
+    const errorImage = document.getElementById('errorImage');
 
     content.classList.remove('hidden');
     overlay.classList.add('hidden');
     overlay.textContent = '';
+    errorImage.classList.add('hidden');
+    document.body.classList.remove('shake');
 }
