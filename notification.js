@@ -7,32 +7,31 @@ document.getElementById('developmentButton').addEventListener('click', function(
 });
 
 function startDestruction() {
-    const button = document.getElementById('developmentButton');
+    const content = document.getElementById('content');
     const overlay = document.getElementById('overlay');
-    
-    button.classList.add('shake');
-    
+
+    content.classList.add('hidden');
+    overlay.classList.remove('hidden');
+    overlay.textContent = 'Телефон уничтожается...';
+
     setTimeout(() => {
-        button.remove();
-        showOverlay(overlay);
-    }, 3000);
+        overlay.textContent = 'Сайт ломается...';
+    }, 2000);
+
+    setTimeout(() => {
+        overlay.textContent = 'Хаха, ты попался на прикол, 1 апреля не верь никому!';
+    }, 5000);
+
+    setTimeout(() => {
+        resetPage();
+    }, 10000);
 }
 
-function showOverlay(overlay) {
-    overlay.classList.remove('hidden');
-    overlay.textContent = 'Уничтожение...';
-    
-    setTimeout(() => {
-        overlay.textContent = 'Телефон ломается...';
-    }, 2000);
-    
-    setTimeout(() => {
-        overlay.textContent = '';
-        overlay.classList.add('hidden');
-        document.body.classList.add('shake');
-    }, 4000);
-    
-    setTimeout(() => {
-        document.body.classList.remove('shake');
-    }, 7000);
+function resetPage() {
+    const content = document.getElementById('content');
+    const overlay = document.getElementById('overlay');
+
+    content.classList.remove('hidden');
+    overlay.classList.add('hidden');
+    overlay.textContent = '';
 }
