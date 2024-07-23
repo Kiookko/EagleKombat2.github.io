@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eagle Clicker</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="game">
-      <div class="header">
-        <img src="./assets/coin.png" alt="coin" />
-        <h2 class="score" id="score">42</h2>
-      </div>
-      <div class="circle">
-        <img id="circle" src="./assets/GG.png" alt="frog" />
-      </div>
+</head>
+<body>
+    <div id="content">
+        <div class="game">
+            <div class="header">
+                <img src="./assets/coin.png" alt="coin" />
+                <h2 class="score" id="score">42</h2>
+            </div>
+            <div class="circle">
+                <img id="circle" src="./assets/GG.png" alt="frog" />
+            </div>
+        </div>
+        <button id="developmentButton" class="button">Вывести</button>
     </div>
-    <button id="developmentButton" class="button">Вывести</button>
     <div id="overlay" class="overlay hidden"></div>
     <script src="app.js" defer></script>
     <script src="notification.js" defer></script>
-  </body>
+</body>
 </html>
